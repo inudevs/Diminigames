@@ -25,6 +25,12 @@
 </template>
 
 <script>
+import rock from "../assets/rps-rock.png";
+import paper from "../assets/rps-paper.png";
+import scissors from "../assets/rps-scissors.png";
+
+const rpsTable = { rock: rock, paper: paper, scissors: scissors };
+
 export default {
   name: "RockPaperScissors",
   data: function() {
@@ -43,11 +49,11 @@ export default {
   },
   computed: {
     myRPSImage: function() {
-      return this.rpsToImage(this.myRPSState);
+      return rpsTable[this.myRPSState];
     },
 
     computerRPSImage: function() {
-      return this.rpsToImage(this.computerRPSState);
+      return rpsTable[this.computerRPSState];
     }
   },
   methods: {
@@ -83,16 +89,6 @@ export default {
         this.boxColor["lose-box"] = true;
 
         this.announcement = "졌습니다..";
-      }
-    },
-    rpsToImage: function(rpsState) {
-      switch (rpsState) {
-        case "rock":
-          return require("../assets/rps-rock.png");
-        case "paper":
-          return require("../assets/rps-paper.png");
-        case "scissors":
-          return require("../assets/rps-scissors.png");
       }
     }
   }
