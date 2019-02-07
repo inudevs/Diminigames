@@ -103,13 +103,13 @@ export default {
   border-radius: 40px;
   color: white;
 
-  font-size: 2em;
+  font-size: 2vw;
   font-family: "Nanum Gothic", sans-serif;
 
   margin: 0 auto;
   padding: 4px 10px;
   width: auto;
-  max-width: 600px;
+  max-width: 35vw;
   text-align: center;
 }
 
@@ -192,7 +192,8 @@ export default {
   align-self: center;
   justify-self: center;
 
-  width: 100px;
+  font-size: 1vw;
+  padding: 0 20px;
 }
 
 #my-name {
@@ -200,8 +201,6 @@ export default {
 
   border-color: #228be6;
   background-color: #228be6;
-
-  width: 100px;
 }
 
 #computer-name {
