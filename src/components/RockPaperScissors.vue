@@ -107,8 +107,9 @@ export default {
   border-radius: 40px;
   color: white;
 
-  font-size: 2em;
+  font-size: 4.5vmin;
   font-family: "Nanum Gothic", sans-serif;
+  font-weight: bold;
 
   margin: 0 auto 0.75em auto;
   padding: 4px 80px;
