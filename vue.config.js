@@ -1,4 +1,4 @@
 module.exports = {
     runtimeCompiler: true,
-    publicPath: 'Diminigames'
-}
+    publicPath: process.env.NODE_ENV === 'production' ? '/Dimigames/' : '/'
+};

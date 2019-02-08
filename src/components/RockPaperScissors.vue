@@ -1,20 +1,16 @@
 <template>
-  <div>
-    <div>
+  <div class="game-container">
+    <!-- <div>
       <div id="announcement-box" :class="boxColor">{{ announcement }}</div>
-    </div>
+    </div>-->
     <div class="flex-column-container">
-      <div class="player-status-container">
-        <p id="my-score" class="score">{{ myScore }}</p>
-        <img :src="myRPSImage">
-        <div id="my-name" class="player-name">나</div>
-      </div>
+      <p id="my-score" class="score">{{ myScore }}</p>
+      <img :src="myRPSImage">
       <p id="versus">vs</p>
-      <div class="player-status-container">
-        <img v-bind:src="computerRPSImage">
-        <p id="computer-score" class="score">{{ computerScore }}</p>
-        <div id="computer-name" class="player-name">컴퓨터</div>
-      </div>
+      <img :src="computerRPSImage">
+      <p id="computer-score" class="score">{{ computerScore }}</p>
+      <!-- <div id="my-name" class="player-name">나</div>
+      <div id="computer-name" class="player-name">컴퓨터</div>-->
     </div>
     <div class="rps-buttons-container">
       <button id="rock-button" class="rps-button" @click="playGame('rock')"></button>
@@ -98,6 +94,9 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
 
+.game-container {
+}
+
 #announcement-box {
   border: 2px solid;
   border-radius: 40px;
@@ -129,7 +128,9 @@ export default {
 }
 
 .flex-column-container {
-  display: flex;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -143,43 +144,17 @@ export default {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 7vw;
   font-weight: bold;
-
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-#my-score {
-  margin-right: 0.3em;
-  text-align: right;
-}
-
-#computer-score {
-  margin-left: 0.3em;
-  text-align: left;
 }
 
 #versus {
   font-family: "Times New Roman", Times, serif;
-  font-size: 8vw;
-
-  margin-top: 0.5em;
-}
-.flex-column-container img {
-  width: 75%;
-  height: 90%;
+  font-size: 10vw;
+  margin: 0.5em 0;
 }
 
-.player-status-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-
-  flex: 2;
-}
-
-.player-status-container img {
-  align-self: center;
-  justify-self: center;
+.flex-column-container > img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .player-name {
@@ -211,20 +186,19 @@ export default {
 
 .rps-buttons-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 5em;
+
+  margin-top: 0.2em;
 }
 
 .rps-button {
   opacity: 0.3;
-
-  width: 6vw;
-  height: 6vw;
-
-  margin: 0 5px;
+  flex: 1;
 
   border: 2px solid black;
-  border-radius: 50%;
+  border-radius: 20px;
+
+  margin: 0 5px;
 
   cursor: pointer;
 }
@@ -238,23 +212,47 @@ export default {
 }
 
 .rps-button:active {
-  width: 5.8vw;
-  height: 5.8vw;
+}
+
+@media screen and (orientation: portrait) {
+  .flex-column-container {
+    grid-template-columns: 2.5fr 1fr 2.5fr;
+    font-size: 2em;
+
+    margin-top: 0;
+  }
+
+  #versus {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 13vw;
+  }
+
+  .score {
+    grid-row: 2;
+    margin-top: 0.1em;
+  }
+
+  #computer-score {
+    grid-column: 3;
+  }
 }
 
 #rock-button {
   background: url(../assets/rps-rock.png) no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 }
 
 #paper-button {
   background: url(../assets/rps-paper.png) no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 }
 
 #scissors-button {
   background: url(../assets/rps-scissors.png) no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 }
 </style>
 
