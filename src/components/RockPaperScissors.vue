@@ -1,8 +1,10 @@
 <template>
-  <div class="game-container">
-    <!-- <div>
-      <div id="announcement-box" :class="boxColor">{{ announcement }}</div>
-    </div>-->
+  <div>
+    <div id="announcement-container">
+      <div>
+        <div id="announcement-box" :class="boxColor">{{ announcement }}</div>
+      </div>
+    </div>
     <div class="flex-column-container">
       <p id="my-score" class="score">{{ myScore }}</p>
       <img :src="myRPSImage">
@@ -94,22 +96,25 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
 
-.game-container {
-}
+#announcement-container {
+  display: flex;
 
+  justify-content: center;
+  align-items: center;
+}
 #announcement-box {
   border: 2px solid;
   border-radius: 40px;
   color: white;
 
-  font-size: 2vw;
+  font-size: 2em;
   font-family: "Nanum Gothic", sans-serif;
 
-  margin: 0 auto;
-  padding: 4px 10px;
-  width: auto;
-  max-width: 35vw;
+  margin: 0 auto 0.75em auto;
+  padding: 4px 80px;
   text-align: center;
+  align-self: center;
+  justify-content: center;
 }
 
 .tie-box {
@@ -188,7 +193,7 @@ export default {
   display: flex;
   height: 5em;
 
-  margin-top: 0.2em;
+  margin: 0.75em 7vw 0 7vw;
 }
 
 .rps-button {
