@@ -51,13 +51,14 @@ nav {
   display: inline;
 
   padding: 0;
-
-  overflow: scroll;
+  overflow: wrap;
 }
 
 #top-nav ul li {
   list-style: none;
-  display: inline;
+  display: inline-block;
+
+  white-space: nowrap;
 }
 
 #top-nav .menu-link {
