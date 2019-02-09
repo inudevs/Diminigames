@@ -1,18 +1,23 @@
 <template>
   <div id="app">
-    <h1>디미니게임즈</h1>
+    <navigation-bar/>
     <rock-paper-scissors/>
   </div>
 </template>
 
 <script>
 import RockPaperScissors from "./components/RockPaperScissors.vue";
+import NavigationBar from "./components/NavigationBar.vue";
 
 export default {
   name: "app",
   components: {
-    // eslint-disable-next-line
-    RockPaperScissors
+    RockPaperScissors,
+    NavigationBar
   }
 };
 </script>
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
+</style>

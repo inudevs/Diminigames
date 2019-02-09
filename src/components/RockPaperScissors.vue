@@ -14,7 +14,7 @@
       <!-- <div id="my-name" class="player-name">나</div>
       <div id="computer-name" class="player-name">컴퓨터</div>-->
     </div>
-    <div class="rps-buttons-container">
+    <div id="rps-buttons-container">
       <button id="rock-button" class="rps-button" @click="playGame('rock')"></button>
       <button id="paper-button" class="rps-button" @click="playGame('paper')"></button>
       <button id="scissors-button" class="rps-button" @click="playGame('scissors')"></button>
@@ -94,14 +94,13 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
-
 #announcement-container {
   display: flex;
 
   justify-content: center;
   align-items: center;
 }
+
 #announcement-box {
   border: 2px solid;
   border-radius: 40px;
@@ -109,10 +108,9 @@ export default {
 
   font-size: 4.5vmin;
   font-family: "Nanum Gothic", sans-serif;
-  font-weight: bold;
 
   margin: 0 auto 0.75em auto;
-  padding: 4px 80px;
+  padding: 4px 60px;
   text-align: center;
   align-self: center;
   justify-content: center;
@@ -190,7 +188,7 @@ export default {
   background-color: #fa5252;
 }
 
-.rps-buttons-container {
+#rps-buttons-container {
   display: flex;
   height: 5em;
 
