@@ -20,4 +20,5 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
+@import url("http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css");
 </style>

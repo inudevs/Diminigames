@@ -106,10 +106,10 @@ export default {
   border-radius: 40px;
   color: white;
 
-  font-size: 4.5vmin;
+  font-size: 2.5em;
   font-family: "Nanum Gothic", sans-serif;
 
-  margin: 0 auto 0.75em auto;
+  margin: 0 auto 0.5em auto;
   padding: 4px 60px;
   text-align: center;
   align-self: center;
