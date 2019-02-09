@@ -116,6 +116,18 @@ export default {
   justify-content: center;
 }
 
+@media screen and (max-width: 900px) {
+  #announcement-box {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #announcement-box {
+    font-size: 1.5em;
+  }
+}
+
 .tie-box {
   border-color: #228be6;
   background: #228be6;
