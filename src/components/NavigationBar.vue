@@ -35,7 +35,7 @@ nav {
   display: inline;
   color: #212529;
 
-  font-size: 2.2em;
+  font-size: 1.8em;
   font-family: "Nanum Barun Gothic";
   font-weight: bold;
 
@@ -70,7 +70,7 @@ nav {
 
 @media screen and (max-width: 900px) {
   #top-nav #site-title {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
   #top-nav .menu-link {
@@ -80,7 +80,7 @@ nav {
 
 @media screen and (max-width: 600px) {
   #top-nav #site-title {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 
   #top-nav .menu-link {
