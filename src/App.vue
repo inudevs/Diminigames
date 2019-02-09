@@ -1,18 +1,17 @@
 <template>
   <div id="app">
     <navigation-bar/>
-    <rock-paper-scissors/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import RockPaperScissors from "./components/RockPaperScissors.vue";
+// import RockPaperScissors from "./components/RockPaperScissors.vue";
 import NavigationBar from "./components/NavigationBar.vue";
 
 export default {
   name: "app",
   components: {
-    RockPaperScissors,
     NavigationBar
   }
 };

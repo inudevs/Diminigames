@@ -3,19 +3,22 @@
     <span id="site-title">디미니게임즈</span>
     <ul>
       <li>
-        <a class="menu-link" href="#rps">가위바위보</a>
+        <router-link to="/rps" class="menu-link">가위바위보</router-link>
       </li>
       <li>
-        <a class="menu-link" href="#baseball">숫자야구</a>
+        <router-link to="/baseball" class="menu-link">숫자야구</router-link>
       </li>
       <li>
-        <a class="menu-link" href="#about">정보</a>
+        <router-link to="/about" class="menu-link">정보</router-link>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
+export default {
+  name: "RockPaperScissors"
+};
 </script>
 
 <style>
